@@ -23,7 +23,7 @@ const checkItems = async (items: string[]) => {
   items.forEach(async (item) => {
     const res = await Product.findById({ item });
     if (!res || !res.price) {
-      throw new Error('Data no found');
+      throw new Error('Data not found');
     }
   });
 };
